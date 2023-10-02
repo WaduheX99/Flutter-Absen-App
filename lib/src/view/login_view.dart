@@ -42,13 +42,13 @@ class _LoginViewState extends State<LoginView> {
                         'Log In',
                         style: TextStyle(
                           color: Color.fromRGBO(13, 71, 161, 1),
-                          fontSize: 27,
+                          fontSize: 35,
                           fontFamily: 'Poppins-bold',
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       const SizedBox(
-                        height: 50,
+                        height: 35,
                       ),
                       TextField(
                         textAlign: TextAlign.start,
@@ -124,13 +124,40 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ],
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                  Row(
                     children: [
+                      ClipRRect(
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromRGBO(13, 71, 161, 1),
+                            )
+                          ),
+                          width: 150,
+                          height: 56,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                            ),
+                            child: const Text(
+                              'Register',
+                              style: TextStyle(
+                                color: Color.fromRGBO(13, 71, 161, 1),
+                                fontSize: 20,
+                                fontFamily: 'Poppins-bold',
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                       ClipRRect(
                         borderRadius:
                             const BorderRadius.all(Radius.circular(10)),
-                        child: SizedBox(
+                        child: Container(
+                          margin: EdgeInsets.only(left: 10),
                           width: 150,
                           height: 56,
                           child: ElevatedButton(
